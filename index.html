@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Explorer</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f5e9;
+            margin: 0;
+            padding: 0;
+        }
+        /* Navigation bar */
+        .navbar {
+            background-color: #4caf50;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .search-input {
+            margin-right: 10px;
+        }
+        /* Explore page */
+        .explore-container {
+            padding: 20px;
+        }
+        .filter-box {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .explore-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .list-item {
+            width: 30%;
+            margin: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .list-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        /* Community page */
+        .community-container {
+            padding: 20px;
+        }
+        .add-post-button {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .post {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .post-image {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            border-radius: 8px;
+        }
+        .post-description {
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+        /* Additional styles for the explore page */
+        .list-item:hover {
+            cursor: pointer;
+        }
+
+
+        .community-link,
+        .explore-link {
+            color: #333; /* Darker text color */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="search-bar">
+            <label for="search-input">Search:</label>
+            <input type="text" id="search-input" class="search-input" placeholder="Search...">
+            <button>Search</button>
+        </div>
+        <div class="navigation-tabs">
+            <a href="#" class="community-link">Community</a>
+            <a href="#" class="explore-link">Explore</a>
+        </div>
+    </div>
+    <div class="explore-container">
+        <div class="filter-box">
+            <button id="filter-plants">Plants</button>
+            <button id="filter-animals">Animals</button>
+        </div>
+        <div class="explore-list">
+            <!-- Example animal: Red Fox -->
+            <div class="list-item" onclick="showDetails('Red Fox', 'A small carnivorous mammal known for its reddish fur and bushy tail.')">
+                <img src="red_fox.jpg" alt="Red Fox">
+                <h3>Red Fox</h3>
+                <p>A small carnivorous mammal known for its reddish fur and bushy tail.</p>
+            </div>
+            <!-- Example plant: Sunflower -->
+            <div class="list-item" onclick="showDetails('Sunflower', 'A tall, bright yellow flower that follows the sun throughout the day.')">
+                <img src="sunflower.jpg" alt="Sunflower">
+                <h3>Sunflower</h3>
+                <p>A tall, bright yellow flower that follows the sun throughout the day.</p>
+            </div>
+            <!-- Add more animals and plants here -->
+        </div>
+    </div>
+    <div class="community-container">
+        <div class="add-post-button">
+            <button id="add-post">Add Post</button>
+        </div>
+        <div class="posts">
+    </div>
+    <script>
+        // JavaScript logic
+        function showDetails(name, description) {
+            alert(`Name: ${name}\nDescription: ${description}`);
+        }
+
+        // Event listeners for filter buttons
+        const filterPlantsButton = document.getElementById('filter-plants');
+        const filterAnimalsButton = document.getElementById('filter-animals');
+
+        filterPlantsButton.addEventListener('click', () => {
+            // Logic to filter plants
+            console.log('Filtering plants...');
+        });
+
+        filterAnimalsButton.addEventListener('click', () => {
+            // Logic to filter animals
+            console.log('Filtering animals...');
+        });
+    </script>
+</body>
+</html>
